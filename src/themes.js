@@ -1,17 +1,19 @@
 
-   const bodyRef = document.querySelector('body');
-  const switchRef = document.querySelector('.js-switch-input');
-
-  
-  const Theme = {
+   const Theme = {
     LIGHT: 'light-theme',
     DARK: 'dark-theme',
   };
+   
+  const bodyRef = document.querySelector('body');
+  const switchRef = document.querySelector('.js-switch-input');
+
   
-  switchRef.addEventListener('change', setClassList);
-  switchRef.addEventListener('change', setLocalStorage);
   
-  function setClassList() {
+  
+  switchRef.addEventListener('change', setClass);
+  switchRef.addEventListener('change', addLocalStorage);
+  
+  function setClass(event) {
     const onCheck = switchRef.checked;
   
     if (onCheck) {
@@ -23,7 +25,7 @@
     }
   }
   
-  function setLocalStorage() {
+  function addLocalStorage(event) {
     const onCheck = switchRef.checked;
   
     if (onCheck) {
@@ -34,9 +36,9 @@
     }
   }
   
-  const themeInLocal = localStorage.getItem('theme');
+  const localTheme = localStorage.getItem('theme');
   
-  if (themeInLocal === Theme.DARK) {
+  if (localTheme === Theme.DARK) {
     bodyRef.classList.add(Theme.DARK);
     switchRef.checked = true;
   }
