@@ -1,13 +1,11 @@
-import menuItem from "./themes";
-console.log(menuItem);
-
-import menu from "./menu.json";
-
+import itemTemplate from "./templates/templates.hbs";
+import cards from "./menu.json";
+console.log(cards);
+const markup = itemTemplate(cards);
 export const menuList = document.querySelector(".js-menu");
-export const menuCards = createMenuCards(menu);
+export const menuCards = createMenuCards(cards);
+export default menuList.insertAdjacentHTML("beforeend", markup);
 
-export default menuList.insertAdjacentHTML("beforeend", menuCards);
-
-function createMenuCards(menu) {
-  return menu.map(menuItem).join("");
+function createMenuCards(cards) {
+  return cards.map(itemTemplate).join("");
 }

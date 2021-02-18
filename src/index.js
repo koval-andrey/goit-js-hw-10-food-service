@@ -1,5 +1,3 @@
-import menuElement from "./menu.json";
-import menuTemplate from "./templates.hbs";
-import "./themes";
+import "./themes.js";
 import "./styles.css";
-
+import './menu.js';
