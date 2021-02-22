@@ -7,5 +7,5 @@ export const menuCards = createMenuCards(cards);
 export default menuList.insertAdjacentHTML("beforeend", markup);
 
 function createMenuCards(cards) {
-  return cards.map(itemTemplate).join("");
+  return cards.map(itemTemplate).join(" ");
 }

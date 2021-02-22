@@ -21,9 +21,9 @@
   },
   "homepage": "https://koval-andrey.github.io/goit-js-hw-10-food-service/.",
   "devDependencies": {
-    "@babel/core": "^7.12.16",
+    "@babel/core": "^7.12.17",
     "@babel/plugin-proposal-class-properties": "^7.12.13",
-    "@babel/preset-env": "^7.12.16",
+    "@babel/preset-env": "^7.12.17",
     "autoprefixer": "^9.8.6",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
@@ -33,7 +33,7 @@
     "gh-pages": "^3.1.0",
     "handlebars-loader": "^1.7.1",
     "html-loader": "^1.3.2",
-    "html-webpack-plugin": "^4.5.1",
+    "html-webpack-plugin": "^4.5.2",
     "img-loader": "^3.0.2",
     "mini-css-extract-plugin": "^0.11.3",
     "node-sass": "^4.14.1",
@@ -49,7 +49,7 @@
     "webpackbar": "^4.0.0"
   },
   "dependencies": {
-    "core-js": "^3.8.3",
+    "core-js": "^3.9.0",
     "handlebars": "^4.7.7",
     "postcss-cli": "^8.3.1"
   }

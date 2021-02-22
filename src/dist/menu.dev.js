@@ -23,5 +23,5 @@ var _default = menuList.insertAdjacentHTML("beforeend", markup);
 exports["default"] = _default;
 
 function createMenuCards(cards) {
-  return cards.map(_templates["default"]).join("");
+  return cards.map(_templates["default"]).join(" ");
 }
