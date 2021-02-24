@@ -1,20 +1,20 @@
-const theme = {
+"use strict";
+
+var theme = {
   LIGHT: "light-theme",
-  DARK: "dark-theme",
+  DARK: "dark-theme"
 };
-
-const bodyRef = document.querySelector("body");
-const switchRef = document.querySelector("#theme-switch-toggle");
-
-const lightTheme = "light-theme";
-const savedTheme = localStorage.getItem(lightTheme);
-
+var bodyRef = document.querySelector("body");
+var switchRef = document.querySelector("#theme-switch-toggle");
+var lightTheme = "light-theme";
+var savedTheme = localStorage.getItem(lightTheme);
 bodyRef.classList.add(theme.LIGHT);
 switchRef.addEventListener("change", onSwitchTheme);
 
 if (savedTheme === "") {
   bodyRef.classList.add(theme.LIGHT);
 }
+
 if (savedTheme === "false") {
   bodyRef.classList.remove(theme.LIGHT);
   bodyRef.classList.add(theme.DARK);
@@ -24,7 +24,6 @@ if (savedTheme === "false") {
 function onSwitchTheme() {
   bodyRef.classList.toggle(theme.LIGHT);
   bodyRef.classList.toggle(theme.DARK);
-
-  const isInThemeLight = bodyRef.classList.contains(theme.LIGHT);
+  var isInThemeLight = bodyRef.classList.contains(theme.LIGHT);
   localStorage.setItem(lightTheme, isInThemeLight);
 }
